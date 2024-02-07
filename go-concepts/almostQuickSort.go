@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"strings"
 )
@@ -47,14 +46,14 @@ func main() {
 	arrSize := 0
 	_, err := fmt.Scan(&arrSize)
 	if err != nil {
-		panic(errors.New("input's fucked"))
+		panic(err)
 	}
 
 	arr := make([]int, arrSize)
 	for i := 0; i < arrSize; i++ {
 		_, err := fmt.Scan(&arr[i])
 		if err != nil {
-			panic(errors.New("input's fucked"))
+			panic(err)
 		}
 	}
 
